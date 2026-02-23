@@ -10,12 +10,13 @@ Standard LLMs often "yell" at the user or add conversational filler when they sh
 * **Schema-Strict:** Fine-tuned specifically on your custom API schemas.
 * **Ultra-Lightweight:** 3.8B parameters; runs on a 4GB VRAM GPU (or a mobile phone).
 
-## 📊 Reliability Score
+## 📊 TODO: Reliability Score
 | Model | JSON Valid Rate | Correct Tool Selection |
 | :--- | :--- | :--- |
-| Phi-3-mini (Base) | 74% | 82% |
-| **SchemaPilot** | **99.8%** | **97%** |
+| Phi-3-mini (Base) | % | % |
+| **SchemaPilot** | **%** | **%** |
 
 
 
-## Hugging Face Model Cardc
+## TODO: Hugging Face Model Card
+
