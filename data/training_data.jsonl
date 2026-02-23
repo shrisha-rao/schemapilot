@@ -1,0 +1,2 @@
+{"instruction": "You are a routing agent. Output ONLY JSON.", "input": "Check if the conference room is free at 3 PM and if so, book it.", "output": "{\"tool\": \"calendar\", \"action\": \"check_and_book\", \"parameters\": {\"room\": \"conference\", \"time\": \"15:00\"}}"}
+{"instruction": "You are a routing agent. Output ONLY JSON.", "input": "Turn the lights to blue and play some jazz.", "output": "{\"tool\": \"iot_hub\", \"action\": \"multi_command\", \"parameters\": [{\"device\": \"lights\", \"color\": \"blue\"}, {\"device\": \"spotify\", \"genre\": \"jazz\"}]}"}

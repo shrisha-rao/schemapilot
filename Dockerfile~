@@ -1,0 +1,26 @@
+# Use an official lightweight Python image
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# 1. Update pip first to avoid TLS/compatibility issues
+RUN pip install --no-cache-dir --upgrade pip
+
+# 2. Install torch from the CPU-specific repo, 
+# and others from the default PyPI via --extra-index-url
+RUN pip install --no-cache-dir \
+    torch --index-url https://download.pytorch.org/whl/cpu \
+    --extra-index-url https://pypi.org/simple \
+    transformers \
+    peft \
+    accelerate \
+    bitsandbytes \
+    jupyter
+
+# Copy your application code
+COPY ./app /app
+
+# Run the app
+# CMD ["python", "-m" "src.main.py"]
+CMD ["/bin/bash"]

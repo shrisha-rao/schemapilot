@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  schemapilot:
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
+      # - ./model:/app/model  # Path to your fine-tuned LoRA weights
+    environment:
+      # - MODEL_PATH=/app/model
+      - DEVICE=cpu
+    ports:
+      - "8887:8887"
+    # We give the container a bit more RAM as LLMs require more memory
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+
+
+
+# jupyter notebook --ip=0.0.0.0 --port=8887 --no-browser --allow-root          
