@@ -1,0 +1,11 @@
+pi
+unsloth
+trl
+torch
+transformers
+peft
+aaccelerate
+bitsandbytes
+
+
+
